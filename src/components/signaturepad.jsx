@@ -40,10 +40,10 @@ const SignaturePad = () => {
 
   const saveSignature = () => {
     html2canvas(canvasRef.current).then((canvas) => {
-      const imageURL = canvas.toDataURL(`image/${format}`);
+      const imageURL = canvas.toDataURL(`image/jpg`);
       const a = document.createElement('a');
       a.href = imageURL;
-      a.download = `signature.${format}`;
+      a.download = `signature.jpg`;
       a.click();
     });
 
